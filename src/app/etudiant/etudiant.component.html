@@ -1,0 +1,29 @@
+<table class="styled-table">
+  <thead>
+      <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Cin</th>
+          <th>Age</th>
+          <th colspan="2"></th>
+      </tr>
+  </thead>
+  <tbody *ngFor="let etudiant of etudiants ">
+      <tr>
+          <td>{{etudiant.IdEtudiant}}</td>
+          <td>{{etudiant.NomEtudiant}}</td>
+          <td>{{etudiant.PrenomEtudiant}}</td>
+          <td>{{etudiant.CinEtudiant}}</td>
+          <td>{{etudiant.AgeEtudiant}}</td>
+          <td>
+              <button type="button" class="btn btn-danger" (click)="DeleEtudiant(etudiant)">Supprimer</button> </td>
+          
+
+           <td><button type="button" [routerLink]="['/ModifierEtudiant',etudiant.IdEtudiant]" class="btn btn-primary">Modifier</button> </td>
+          
+      </tr>
+      
+      
+  </tbody>
+</table>

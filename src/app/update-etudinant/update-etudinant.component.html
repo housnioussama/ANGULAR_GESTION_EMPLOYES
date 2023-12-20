@@ -1,0 +1,35 @@
+
+
+<form  >
+    <div class="container">
+      <h1>Modifier</h1>
+     
+      
+      <hr>
+  
+      <label for="email"><b>Id:</b></label>
+      <input type="text" placeholder="*****" name="IdEtudiant" value="" [(ngModel)]="currentEtudiant.IdEtudiant" id="Id" required disabled>
+      
+  
+      <label for="psw"><b>Nom:</b></label>
+      <input type="text" placeholder="Votre Nom" name="NomEtudiant" [(ngModel)]="currentEtudiant.NomEtudiant" id="Nom"  required >
+      
+  
+      <label for="psw-repeat"><b>Prenom:</b></label>
+      <input type="text" placeholder="Votre Prenom" [(ngModel)]="currentEtudiant.PrenomEtudiant" id="Prenom"  name="PrenomEtudiant" required>
+      <label for="psw"><b>Age:</b></label>
+      <input type="text" placeholder="Votre Age"  name="AgeEtudiant" [(ngModel)]="currentEtudiant.AgeEtudiant" id="Age"  required >
+      <label for="psw"><b>Cin</b></label>
+      <input type="text" placeholder="Votre Cin" name="CinEtudiant"  [(ngModel)]="currentEtudiant.CinEtudiant" required >
+      <hr>
+      <div *ngIf="alert" class="alert alert-success" role="alert">
+        SUCCESS!
+      </div>
+      <button type="submit" class="registerbtn" (click)="updateEtudiant()" >Modifier</button>
+    </div>
+  
+    
+  
+  </form>
+
+    
